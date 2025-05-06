@@ -7,6 +7,28 @@ This prototype generates a simple 3D model (`.obj` format) from either:
 
 It leverages [OpenAI's Point-E](https://github.com/openai/point-e) to convert these inputs into colored point clouds and export them as `.obj` files.
 
+## Thought Process
+The goal was to design a prototype that can convert a single image or short text prompt into a 3D model in .obj format using open-source AI models. To do this, I chose OpenAI's Point-E, which is well-suited for generating 3D point clouds conditioned on either text or image input.
+
+### Approach Breakdown:
+#### Model Setup:
+I used two versions of Point-E:
+- base40M for image-to-3D generation
+- base40M-textvec for text-to-3D generation
+Each uses an upsampler model to improve point cloud resolution from 1024 to 4096 points.
+
+#### Modular Code Design:
+I refactored the code into separate functions:
+- image_to_3d(): Converts an image to a point cloud.
+- text_to_3d(): Converts text prompts into a 3D point cloud.
+- plot_pointcloud(): Uses Plotly for interactive 3D visualization.
+- save_pointcloud_to_obj(): Exports the point cloud to .obj format.
+
+#### Visualization:
+- I chose Plotly for interactive 3D plotting, supporting both Jupyter and browser rendering.
+- Exporting: The .obj exporter includes RGB color values for better visualization in external tools like Blender or MeshLab.
+- Ease of Use: Everything is wrapped in a simple script that allows users to run either pipeline with minimal input (just a file path or text prompt).
+
 ---
 
 ## How to Run
