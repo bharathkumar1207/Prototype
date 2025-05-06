@@ -9,7 +9,7 @@ It leverages [OpenAI's Point-E](https://github.com/openai/point-e) to convert th
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### 1. Clone and Set Up the Environment
 
