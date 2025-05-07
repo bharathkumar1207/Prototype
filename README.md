@@ -28,7 +28,20 @@ I refactored the code into separate functions:
 - I chose Plotly for interactive 3D plotting, supporting both Jupyter and browser rendering.
 - Exporting: The .obj exporter includes RGB color values for better visualization in external tools like Blender or MeshLab.
 - Ease of Use: Everything is wrapped in a simple script that allows users to run either pipeline with minimal input (just a file path or text prompt).
+---
+## DEMO ( INPUT - OUTPUT)
+- Given a prompt book
+![image alt](https://github.com/bharathkumar1207/Prototype/blob/main/Input/Input-book(prompt).png?raw=true)
 
+- Output
+![image alt](https://github.com/bharathkumar1207/Prototype/blob/main/Output/Output-book(prompt).png)
+
+- Given a image knife
+![image alt](https://github.com/bharathkumar1207/Prototype/blob/main/Input/Input-Knife(img).png)
+
+- Output
+![image alt](https://github.com/bharathkumar1207/Prototype/blob/main/Output/Output-Knife(img)-1.png)
+- https://github.com/user-attachments/assets/cd604bab-d6ba-46bf-980b-2c612cf1266c
 ---
 
 ## How to Run
